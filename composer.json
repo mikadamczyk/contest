@@ -1,0 +1,17 @@
+{
+    "name": "miko/contest",
+    "license": "proprietary",
+    "type": "project",
+    "description": "Contest skeleton",
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.17",
+
+        "symfony/symfony": "~2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.1"
+    }
+}
