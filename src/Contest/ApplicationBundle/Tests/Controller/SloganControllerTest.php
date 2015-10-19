@@ -8,7 +8,7 @@
 
 namespace Contest\ApplicationBundle\Tests\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Tests\Functional\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
 class SloganControllerTest extends WebTestCase
@@ -25,7 +25,7 @@ class SloganControllerTest extends WebTestCase
 
     public function testSubmitNewSlogan()
     {
-        $response = $this->post('api/contest', array('content' => 'The best Content'));
+        $response = $this->post('api/slogan', array('content' => 'The best Content'));
 
         $this->assertSame(Response::HTTP_CREATED, $response->getStatusCode());
     }

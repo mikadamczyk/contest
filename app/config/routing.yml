@@ -1,0 +1,6 @@
+submit_slogan:
+  path: /api/slogan
+  methods:
+    - POST
+  defaults:
+    _controller: ContestApplicationBundle:Slogan:submit
