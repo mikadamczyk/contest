@@ -20,6 +20,12 @@ class SloganController extends Controller
         $postedContent = $request->getContent();
         $postedValues = json_decode($postedContent, true);
 
+        if(empty($postedValues['content'])){
+            $answer = array('message' => 'Missing required parameter: content');
+
+            return new JsonResponse($answer, Response::HTTP_UNPROCESSABLE_ENTITY);
+        }
+
         $answer['slogan']['content'] = $postedValues['content'];
 
         return new JsonResponse($answer, Response::HTTP_CREATED);

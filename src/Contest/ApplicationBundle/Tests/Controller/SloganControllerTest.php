@@ -29,4 +29,18 @@ class SloganControllerTest extends WebTestCase
 
         $this->assertSame(Response::HTTP_CREATED, $response->getStatusCode());
     }
+
+    public function testSubmitEmptySlogan()
+    {
+        $response = $this->post('/api/slogan', array('content' => ''));
+
+        $this->assertSame(Response::HTTP_UNPROCESSABLE_ENTITY, $response->getStatusCode());
+    }
+
+    public function testSubmitNoSlogan()
+    {
+        $response = $this->post('/api/slogan', array());
+
+        $this->assertSame(Response::HTTP_UNPROCESSABLE_ENTITY, $response->getStatusCode());
+    }
 }
