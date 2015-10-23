@@ -10,6 +10,7 @@ class AppKernel extends Kernel
         return array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Contest\ApplicationBundle\ContestApplicationBundle(),
+            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
         );
     }
 
