@@ -1,0 +1,15 @@
+Contest\ApplicationBundle\Entity\Slogan:
+    type: entity
+    repositoryClass: Contest\ApplicationBundle\Entity\SloganGateway
+    table: slogan
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        content:
+            type: text
+        createdAt:
+            type: datetime
+            column: created_at
