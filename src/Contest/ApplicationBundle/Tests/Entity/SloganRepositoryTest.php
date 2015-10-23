@@ -20,7 +20,7 @@ class SloganRepositoryTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $filename = '/tmp/fortune_database_test.txt';
+        $filename = '/tmp/contest_database_test.txt';
         $gateway = new SloganGateway($filename);
         $factory = new SloganFactory();
         $this->repository = new SloganRepository($gateway, $factory);

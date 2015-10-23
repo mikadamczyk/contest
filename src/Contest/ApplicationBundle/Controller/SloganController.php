@@ -26,8 +26,9 @@ class SloganController extends Controller
             return new JsonResponse($answer, Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
-        $answer['slogan']['content'] = $postedValues['content'];
+        $sloganRepository = $this->container->get('contest_application.slogan_repository');
+        $slogan = $sloganRepository->insert($postedValues['content']);
 
-        return new JsonResponse($answer, Response::HTTP_CREATED);
+        return new JsonResponse($slogan, Response::HTTP_CREATED);
     }
 }

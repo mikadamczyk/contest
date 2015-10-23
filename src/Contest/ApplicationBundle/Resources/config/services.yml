@@ -1,0 +1,10 @@
+services:
+    contest_application.slogan_factory:
+        class: "Contest\ApplicationBundle\Entity\SloganFactory"
+    contest_application.slogan_gateway:
+        class: "Contest\ApplicationBundle\Entity\SloganGateway"
+        arguments: ['/tmp/contest_database_test.txt']
+    contest_application.slogan_repository:
+        class: "Contest\ApplicationBundle\Entity\SloganRepository"
+        arguments: [@contest_application.slogan_gateway, @contest_application.slogan_factory]
+
