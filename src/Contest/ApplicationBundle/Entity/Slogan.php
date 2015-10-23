@@ -22,7 +22,7 @@ class Slogan
         $this->createdAt = new \DateTime();
     }
 
-    public function fromContent($content)
+    public static function fromContent($content)
     {
         return new Slogan(null, $content);
     }

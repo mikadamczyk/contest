@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8f1fb1d9bedfbf17c04a6f924bfad016",
-    "content-hash": "05a69976e872cac4b2d97f6b34b2f840",
+    "hash": "50d1f7a555e8b0d24c57d711b47fc669",
+    "content-hash": "c008cc238c979e1018a1ccd0cc7e092e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1150,6 +1150,57 @@
                 "stub"
             ],
             "time": "2015-08-13 10:07:40"
+        },
+        {
+            "name": "phpspec/prophecy-phpunit",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpspec/prophecy-phpunit.git",
+                "reference": "0d06c84b9f26aab2b9940354f0fe6037dd9799c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpspec/prophecy-phpunit/zipball/0d06c84b9f26aab2b9940354f0fe6037dd9799c3",
+                "reference": "0d06c84b9f26aab2b9940354f0fe6037dd9799c3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpspec/prophecy": "~1.3"
+            },
+            "suggest": {
+                "phpunit/phpunit": "if it is not installed globally"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prophecy\\PhpUnit\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                }
+            ],
+            "description": "PhpUnit test case integrating the Prophecy mocking library",
+            "homepage": "http://phpspec.net",
+            "keywords": [
+                "phpunit",
+                "prophecy"
+            ],
+            "abandoned": "phpunit/phpunit",
+            "time": "2015-02-09 11:20:26"
         },
         {
             "name": "phpunit/php-code-coverage",
