@@ -4,3 +4,10 @@ submit_slogan:
     - POST
   defaults:
     _controller: ContestApplicationBundle:Slogan:submit
+
+list_slogans:
+  path: /api/slogans
+  methods:
+    - GET
+  defaults:
+    _controller: ContestApplicationBundle:Slogan:list

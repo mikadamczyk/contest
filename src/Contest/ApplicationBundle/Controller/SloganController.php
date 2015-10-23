@@ -31,4 +31,12 @@ class SloganController extends Controller
 
         return new JsonResponse($slogan, Response::HTTP_CREATED);
     }
+
+    public function listAction(Request $request)
+    {
+        $sloganRepository = $this->container->get('contest_application.slogan_repository');
+        $slogans = $sloganRepository->findAll();
+
+        return new JsonResponse($slogans, Response::HTTP_OK);
+    }
 }

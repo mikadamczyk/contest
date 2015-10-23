@@ -23,6 +23,16 @@ class SloganControllerTest extends WebTestCase
         return $client->getResponse();
     }
 
+    private function get($uri)
+    {
+        $headers = array('CONTENT_TYPE' => 'application/json');
+        $client = static::createClient();
+        $client->request('GET', $uri, array(), array(),$headers);
+
+        return $client->getResponse();
+    }
+
+
     public function testSubmitNewSlogan()
     {
         $response = $this->post('api/slogan', array('content' => 'The best Content'));
@@ -42,5 +52,12 @@ class SloganControllerTest extends WebTestCase
         $response = $this->post('/api/slogan', array());
 
         $this->assertSame(Response::HTTP_UNPROCESSABLE_ENTITY, $response->getStatusCode());
+    }
+
+    public function testListingAllSlogans()
+    {
+        $response = $this->get('/api/slogans');
+
+        $this->assertSame(Response::HTTP_OK, $response->getStatusCode());
     }
 }
